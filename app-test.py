@@ -26,6 +26,7 @@ class FlaskrTestCase(unittest.TestCase):
     def setUp(self):
         """Set up a blank temp database before each test"""
         basedir = os.path.abspath(os.path.dirname(__file__))
+        print "the basedir ---->",basedir
         app.config['TESTING'] = True
         app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + \
             os.path.join(basedir, TEST_DB)
