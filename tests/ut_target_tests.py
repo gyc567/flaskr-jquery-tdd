@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 __author__ = 'eric.guo'
 
-from ut_target import SplitZero, EqualToZero
+from ut_target import SplitZero, EqualToZero, Cat
 import unittest
 
 
@@ -29,6 +29,10 @@ class SzTestCase(unittest.TestCase):
         num = 0
         sz = SplitZero()
         self.assertRaises(EqualToZero, sz.splitzero, num)
+
+    def testCat(self):
+        cat=Cat()
+        self.assertEqual(cat.catchRat(),"I catch a rat")
 
 
 if __name__ == "__main__":

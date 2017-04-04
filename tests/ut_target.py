@@ -11,3 +11,7 @@ class SplitZero(object):
             return "num is smaller than zero"
         else:
             raise EqualToZero
+
+class Cat(object):
+    def catchRat(self):
+        return "I catch a rat"
