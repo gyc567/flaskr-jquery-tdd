@@ -8,10 +8,6 @@ def fun(x):
 
 class TestStringMethods(unittest.TestCase):
 
-
-
-
-
     def test(self):
         self.assertEqual(fun(3), 4)
 
