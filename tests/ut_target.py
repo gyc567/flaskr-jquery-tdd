@@ -13,6 +13,7 @@ class SplitZero(object):
         else:
             raise EqualToZero
 
+
 class Teacher(object):
     def teach(self):
          return "Teach"
@@ -41,3 +42,8 @@ class Calculator(object):
 # class Division(object):
 #     def division(self,a,b):
 #         return a/b
+
+class Cat(object):
+    def catchRat(self):
+        return "I catch a rat"
+
