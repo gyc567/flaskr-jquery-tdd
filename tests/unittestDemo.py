@@ -2,7 +2,18 @@
 __author__ = 'YU'
 import unittest
 
+
+def fun(x):
+    return x + 1
+
 class TestStringMethods(unittest.TestCase):
+
+
+
+
+
+    def test(self):
+        self.assertEqual(fun(3), 4)
 
     def test_upper(self):
         foo='foo'.upper()
@@ -29,6 +40,7 @@ class TestStringMethods(unittest.TestCase):
         # check that s.split fails when the separator is not a string
         with self.assertRaises(TypeError):
             s.split(2)
+
 
 if __name__ == '__main__':
     unittest.main()
