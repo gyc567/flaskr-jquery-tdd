@@ -6,6 +6,12 @@ from behave import *
 from hamcrest import *
 from CalculatorImpl import Calculator
 
+import ast
+
+def num(x):
+   return ast.literal_eval(x)
+   # return float(x) if '.' in x else int(x)
+
 
 # 加法
 @given('we have two number {number1},{number2}')
@@ -67,8 +73,8 @@ def go_number(context, number):
 # 除法
 @given('he have two number {number1},{number2}')
 def he_number(context, number1, number2):
-    context.number1 = int(number1)
-    context.number2 = int(number2)
+    context.number1 = num(number1)
+    context.number2 = num(number2)
 
 
 @when('he calc the division')
@@ -79,5 +85,6 @@ def calc_division(context):
 
 @then('he get the division number {number}')
 def gogo_number(context, number):
-    context.expected_number = int(number)
+    context.expected_number = num(number)
     assert_that(context.division_number, equal_to(context.expected_number),"Calc division number: %d" % context.division_number)
+

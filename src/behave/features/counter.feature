@@ -49,8 +49,8 @@ Feature: implements Calculator
 
     Examples: Some Numbers
       | number1 | number2 | division_number |
-      | 2       | 1       | 2              |
+      | 3       | 1.5     | 2               |
       | 3       | 1       | 3               |
-      | 6       | 2       | 3               |
-      | 60      | 3       | 20              |
+      | 5.5     | 5       | 1.1             |
+      | 25.55   | 5       | 5.11            |
 
