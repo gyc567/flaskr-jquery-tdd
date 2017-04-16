@@ -3,9 +3,9 @@
 __author__ = 'eric.guo'
 
 
-from ut_target import SplitZero, EqualToZero,Teacher,Calculator
+from ut_target import   Teacher,Calculator
 
-from ut_target import SplitZero, EqualToZero, Cat
+from ut_target import   Cat
 
 import unittest
 
@@ -20,17 +20,7 @@ class SzTestCase(unittest.TestCase):
         pass
         # print "test stop"
 
-    def testSzBig(self):
-        num = 10
-        sz = SplitZero()
-        self.assertEqual(sz.splitzero(num),
-                         "num is bigger than zero")
 
-    def testSzSmall(self):
-        num = -10
-        sz = SplitZero()
-        self.assertEqual(sz.splitzero(num),
-                         "num is smaller than zero")
 
     def testFigure(self):
         a=1
@@ -62,10 +52,7 @@ class SzTestCase(unittest.TestCase):
         teacher=Teacher()
         self.assertEqual(teacher.teach(),'Teach')
 
-    def testSzEqual(self):
-        num = 0
-        sz = SplitZero()
-        self.assertRaises(EqualToZero, sz.splitzero, num)
+
 
     def testCat(self):
         cat=Cat()
