@@ -1,6 +1,6 @@
-1493734249289	geckodriver	INFO	Listening on 127.0.0.1:57891
-1493734249891	mozprofile::profile	INFO	Using profile path C:\Users\IBM_AD~1\AppData\Local\Temp\rust_mozprofile.udWIszTH2CK6
-1493734249895	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
-1493734249906	geckodriver::marionette	INFO	Connecting to Marionette on localhost:57895
+1494736610456	geckodriver	INFO	Listening on 127.0.0.1:52915
+1494736611028	mozprofile::profile	INFO	Using profile path C:\Users\IBM_AD~1\AppData\Local\Temp\rust_mozprofile.dlm4M7XlhsaW
+1494736611035	geckodriver::marionette	INFO	Starting browser C:\Program Files (x86)\Mozilla Firefox\firefox.exe with args []
+1494736611050	geckodriver::marionette	INFO	Connecting to Marionette on localhost:52919
 1492339218036	addons.productaddons	WARN	File download failed: 0x80004004
 1492339218133	addons.productaddons	WARN	File download failed: 0x80040111
