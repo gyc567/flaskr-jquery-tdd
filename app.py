@@ -38,6 +38,16 @@ def index():
 def signUp():
     return render_template('signUp.html')
 
+@app.route('/signUpUser',methods=['POST'])
+def signUpUser():
+    username=request.form['username']
+    password=request.form['password']
+
+
+    return render_template('signUp.html')
+
+
+
 
 @app.route('/add', methods=['POST'])
 def add_entry():
