@@ -2,36 +2,23 @@
 # -*- coding: utf-8 -*-
 __author__ = 'eric.guo'
 
-# -*- coding: utf-8 -*-
 from chatterbot import ChatBot
-import logging
+from chatterbot.trainers import ListTrainer
 
+chatbot = ChatBot("Ron Obvious")
 
-# Uncomment the following line to enable verbose logging
-# logging.basicConfig(level=logging.INFO)
+conversation = [
+    "Hello",
+    "Hi there!",
+    "How are you doing?",
+    "I'm doing great.",
+    "That is good to hear",
+    "Thank you.",
+    "You're welcome."
+]
 
-# Create a new instance of a ChatBot
-bot = ChatBot("Terminal",
-    storage_adapter="chatterbot.storage.JsonFileStorageAdapter",
-    logic_adapters=[
-        "chatterbot.logic.MathematicalEvaluation",
-        "chatterbot.logic.TimeLogicAdapter",
-        "chatterbot.logic.BestMatch"
-    ],
-    input_adapter="chatterbot.input.TerminalAdapter",
-    output_adapter="chatterbot.output.TerminalAdapter",
-    database="../database.db"
-)
+chatbot.set_trainer(ListTrainer)
+chatbot.train(conversation)
 
-print("Type something to begin...")
-
-# The following loop will execute each time the user enters input
-while True:
-    try:
-        # We pass None to this method because the parameter
-        # is not used by the TerminalAdapter
-        bot_input = bot.get_response(None)
-
-    # Press ctrl-c or ctrl-d on the keyboard to exit
-    except (KeyboardInterrupt, EOFError, SystemExit):
-        break
+response = chatbot.get_response("Good morning!")
+print(response)
